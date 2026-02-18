@@ -14,9 +14,9 @@ export async function createComplaint(req, res){
 
 export function adminLogin(req, res){
     const {password} = req.body
-    const authPasword = checkPassword(password)
-    if(authPasword){
-        return res.status(200).json({ message: "אימות הצליח", authPasword })
+    const token = checkPassword(password)
+    if(token){
+        return res.status(200).json({ message: "אימות הצליח", token })
     }
     else{
         return res.status(401).json({ message: "האימות נכשל!" })

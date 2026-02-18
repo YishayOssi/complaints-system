@@ -22,5 +22,5 @@ export function checkPassword(password){
 
 export async function getAllComplaintsService() {
     const data = await readData();
-    return data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    return data.reverse()
 }
