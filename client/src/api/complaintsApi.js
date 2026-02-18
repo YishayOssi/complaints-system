@@ -20,3 +20,19 @@ export async function handleCheckPassword(password){
     const data = await res.json();
     return data
 }
+
+
+export async function getAllComplaintsApi(token) {
+    try {
+        const res = await fetch(`${BASE_URL}/api/complaints`, {
+            method: "GET",
+            headers: {
+                "authorization": token 
+            }
+        });
+        return await res.json();
+    } catch (error) {
+        console.error("Error fetching complaints:", error);
+        return [];
+    }
+}

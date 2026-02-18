@@ -64,3 +64,47 @@ body {
 form .content{
     gap: 10px;
 }
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; 
+
+}
+
+
+.main-table {
+  width: 100%; 
+  border-collapse: collapse; 
+  direction: rtl;
+  
+}
+
+
+.main-table th {
+  background-color: #f2f2f2;
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: right;
+  
+}
+
+
+.complaint-row td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: right;
+  word-break: break-word;
+}
+
+
+.complaint-row td:nth-child(2) {
+  width: 60%;
+}
+
+
+thead th {
+  position: sticky; 
+  top: 0;           
+}
+
+
